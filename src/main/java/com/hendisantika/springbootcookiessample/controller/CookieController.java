@@ -38,4 +38,20 @@ public class CookieController {
 
         return "Username is changed!";
     }
+
+    @GetMapping("/delete-username")
+    public String deleteCookie(HttpServletResponse response) {
+
+        // create a cookie
+        Cookie cookie = new Cookie("username", null);
+        cookie.setMaxAge(0);
+        cookie.setSecure(true);
+        cookie.setHttpOnly(true);
+        cookie.setPath("/");
+
+        //add cookie to response
+        response.addCookie(cookie);
+
+        return "Username is deleted!";
+    }
 }
