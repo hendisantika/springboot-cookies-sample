@@ -20,5 +20,10 @@ In the above example, if cookie with name sessionId is not found in the http req
 ## Writting Cookie using HttpServletResponse
 We use addCookie() method  of the javax.servlet.http.HttpServletResponse to write cookies. 
 
+## Using HttpServletRequest to read Cookies
+Apart from @CookieValue annotation, we can also use getCookies() method of HttpServletRequest to read a list and interate through to obtain cookie.
+
+@CookieValue annotation is much more easier when working with Cookies than iterating through a list of cookies to find value from name. This annotation came around in Spring 3 Framework.
+
 For step-by-step instructions, please check out the [blog post](https://attacomsian.com/blog/cookies-spring-boot).
 [here also](https://dzone.com/articles/how-to-use-cookies-in-spring-boot?edition=510297&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=Daily%20Digest%202019-08-01)
