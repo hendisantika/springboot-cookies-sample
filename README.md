@@ -10,5 +10,15 @@ Cookies are very important when building modern web applications. Cookies are mo
 Keeping track of the user’s activities so we can provide the users with valid information. This is ideal for most shopping application that rely on cookies to display products that may be of interest to the users.
 Cookies are used in session management. Recall that http is a stateless protocol. It treats each request to the server as a new request. To maintain state, we often use session. Cookie is used to keep track of the user by storing the session id. In cases where Cookie is disabled, the session id can be sent as a query parameter.
 
+## Reading cookie with @CookieValue annotation
+@CookieValue annotation is used to access data stored within http cookie. All we need to do is to provide the cookie name as parameter. This is a very handy annotation which helps us to binds the cookie value with method argument without the hassle of iterating over all the cookie list from http request and fetching the cookie value from the name.
+
+If Cookie with the given name is not found, we will get into java.lang.IllegalStateException. This imply that we are using this annotation at an ‘illegal’ or inappropriate time. To avoid getting into this exception, its recommended to provide a default value. 
+
+In the above example, if cookie with name sessionId is not found in the http request, Spring will automatically binds the sessionId parameter with the default value ‘none’.
+
+## Writting Cookie using HttpServletResponse
+We use addCookie() method  of the javax.servlet.http.HttpServletResponse to write cookies. 
+
 For step-by-step instructions, please check out the [blog post](https://attacomsian.com/blog/cookies-spring-boot).
 [here also](https://dzone.com/articles/how-to-use-cookies-in-spring-boot?edition=510297&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=Daily%20Digest%202019-08-01)
