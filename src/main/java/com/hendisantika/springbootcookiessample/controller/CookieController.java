@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -69,4 +70,14 @@ public class CookieController {
 
         return "No cookies";
     }
+
+    @GetMapping("/setcookie")
+    private String setCookie2(HttpServletResponse response) {
+        Cookie cookie = new Cookie("sessionId", "CookieTestInfo");
+        cookie.setMaxAge(1000); // set expire time to 1000s
+        response.addCookie(cookie); // add cookie in response
+        return "successfully set cookie! " + LocalDateTime.now();
+    }
+
+
 }
