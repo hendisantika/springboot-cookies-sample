@@ -79,5 +79,10 @@ public class CookieController {
         return "successfully set cookie! " + LocalDateTime.now();
     }
 
+    @GetMapping("/cookievalue")
+    private String cookieValue(@CookieValue(value = "sessionId", defaultValue = "none") String sessionId) {
+        return "Cookie Value is " + sessionId;
+    }
+
 
 }
