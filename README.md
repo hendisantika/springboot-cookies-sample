@@ -31,5 +31,21 @@ Apart from @CookieValue annotation, we can also use getCookies() method of HttpS
 
 @CookieValue annotation is much more easier when working with Cookies than iterating through a list of cookies to find value from name. This annotation came around in Spring 3 Framework.
 
+## Screen shot
+
+![Change username](img/change.png "Change username")
+
+![Change username](img/change-firefox.png "Change username Firefox")
+
+![Change username](img/change-opera.png "Change username Opera")
+
+![Get Cookies](img/getcookie.png "Get Cookies")
+
+![Get Cookies](img/getcookie-firefox.png "Get Cookies Firefox")
+
+![H2 Database](img/h2.png "H2 Database")
+
+
+
 For step-by-step instructions, please check out the [blog post](https://attacomsian.com/blog/cookies-spring-boot).
 [here also](https://dzone.com/articles/how-to-use-cookies-in-spring-boot?edition=510297&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=Daily%20Digest%202019-08-01)
