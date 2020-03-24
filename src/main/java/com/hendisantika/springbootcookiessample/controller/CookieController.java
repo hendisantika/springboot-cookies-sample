@@ -1,5 +1,7 @@
 package com.hendisantika.springbootcookiessample.controller;
 
+import com.hendisantika.springbootcookiessample.repository.VisitorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +24,10 @@ import java.util.stream.Collectors;
  */
 @RestController
 public class CookieController {
+
+    @Autowired
+    private VisitorRepository visitorRepository;
+
     @GetMapping("/")
     public String readCookie(@CookieValue(value = "username", defaultValue = "Atta") String username) {
         return "Hey! My username is " + username;
