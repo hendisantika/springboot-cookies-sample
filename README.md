@@ -1,6 +1,12 @@
 # springboot-cookies-sample
 ## How to Use Cookies in Spring Boot
 
+An HTTP Cookie (also known as a web cookie or browser cookie) is a small piece of information stored by the server in the user's browser. The server sets the cookies while returning the response for a request made by the browser. The browser stores the cookies and sends them back with the next request to the same server. Cookies are generally used for session management, user-tracking, and to store user preferences.
+
+Cookies help server remember the client across multiple requests. Without cookies, the server would treat every request as a new client.
+
+In this tutorial, we will learn how to read, set, and remove HTTP cookies in a Spring Boot application.
+
 A cookie is a small piece of data that is stored on the user’s computer. A cookie can be accessed by the browser and send back to the server with any subsequently request.
 
 Cookies are stored as name value pairs. The server uses the unique name or id to access the cookie values. Apart from name and value stored, cookies may also hold some optional attributes such as the maximum age of the cookie, the domain name qualifiers and some comment.
