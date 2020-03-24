@@ -84,5 +84,18 @@ public class CookieController {
         return "Cookie Value is " + sessionId;
     }
 
+    @GetMapping("/getcookie")
+    private String getCookies(HttpServletRequest request) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("sessionId")) {
+                    return cookie.getValue();
+                }
+            }
+        }
+        return null;
+    }
+
 
 }
